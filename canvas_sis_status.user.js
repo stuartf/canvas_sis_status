@@ -4,6 +4,7 @@
 // @version      0.1
 // @description  Show the status of SIS imports
 // @author       D. Stuart Freeman
+// @license      GPL-3.0; https://spdx.org/licenses/GPL-3.0.html
 // @match        https://*.instructure.com/api/v1/accounts/1/sis_imports
 // @require http://code.jquery.com/jquery-1.12.4.min.js
 // @require https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.90/jsrender.min.js
