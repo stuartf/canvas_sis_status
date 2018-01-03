@@ -17,6 +17,7 @@
     var refresh = function(status) {
         $('body').text('');
         for (var stat of status.sis_imports) {
+            stat.created_at = new Date(stat.created_at).toLocaleString();
             $('body').append(template.render(stat));
         }
         setTimeout(function(){
