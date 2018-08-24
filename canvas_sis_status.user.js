@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Canvas SIS Status
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  Show the status of SIS imports
 // @author       D. Stuart Freeman
 // @license      MIT
@@ -19,6 +19,7 @@
         for (var stat of status.sis_imports) {
             stat.created_at = new Date(stat.created_at).toLocaleString();
             stat.data = stat.data || {counts: {courses: 0, users: 0, enrollments: 0}};
+            stat.data.counts = stat.data.counts || {courses: 0, users: 0, enrollments: 0};
             $('body').append(template.render(stat));
         }
         setTimeout(function(){
